@@ -8,5 +8,5 @@ You can do the following:
 - [x] It will automaticly save the data to Production 
 - [x] A log file is provided inside the folder to see changes made 
 
-Please let me know what do you think about the app.(Was the code readable?)
+Please let me know what do you think about the app.(Was the code readable?) 
 Let me know ! :D
