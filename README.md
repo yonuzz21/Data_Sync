@@ -3,7 +3,7 @@ This is a script that will create two folders(Test, Production).The folders will
 
 You can do the following: 
 
-- [ ] It creates the folders on start 
+- [x] It creates the folders on start 
 - [ ] You can add data(name,last name,age) 
 - [ ] You can delete data 
 - [ ] It will automaticly save the data to Production 
