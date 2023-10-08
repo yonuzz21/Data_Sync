@@ -9,9 +9,6 @@ Welcome to my project!
 The script does the folowing:
 * Creates two folders that are always in sync(Production and Test)
 
-* The modification commited in Test folder will be saved automatically after 1 minute,
-  or by pushing to Production.
-
 * You can find a log file inside Production, with all the changes made
 """
 
