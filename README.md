@@ -2,7 +2,6 @@
 This is a script that will create two folders(Test, Production).The folders will be always in sync.
 
 You can do the following: 
-
 - [x] It creates the folders on start 
 - [ ] You can add data(name,last name,age) 
 - [ ] You can delete data 
