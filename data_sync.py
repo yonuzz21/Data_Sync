@@ -1,33 +1,31 @@
 import os ,shutil ,schedule ,logging
 import time as tm
 
-
-
 def sync_folders(source_dir, destination_dir):
     # Create the destination folder if it doesn't exist
     if not os.path.exists(destination_dir):
         shutil.copy(source_dir, destination_dir)
-
+        logging.info(f"[Created] File: {destination_dir} .")
 
     # Sync the folders
     for root, dirs, files in os.walk(destination_dir, topdown=True):
         # Remove any files in the destination that no longer exist in the source
         for file in files:
             destination_file = os.path.join(root, file)
+          
             if os.path.exists(destination_file):
                 os.remove(destination_file)
-                print(f"Deleted: {destination_file}")
-                logging.info(f"[Deleted] File: {destination_file} .")
-
+                print(f"Updated: {destination_file}")
+                logging.info(f"[Updated] File: {file} .")
 
         # Remove any empty directories in the destination
         for dir in dirs:
             destination_dir = os.path.join(root, dir)
+        
             if not os.listdir(destination_dir):
                 os.rmdir(destination_dir)
-                print(f"Deleted directory: {destination_dir}")
-                logging.info(f"[Deleted] Directory: {destination_dir}")
-        
+                print(f"Updated directory: {destination_dir}")
+                logging.info(f"[Updated] Directory: {destination_dir}")
         
     # Copy files from source to destination
     shutil.copytree(source_dir, destination_dir, dirs_exist_ok=True)
